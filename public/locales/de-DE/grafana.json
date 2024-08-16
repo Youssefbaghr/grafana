@@ -120,6 +120,9 @@
       "used-by_one": "",
       "used-by_other": ""
     },
+    "contactPointFilter": {
+      "label": ""
+    },
     "grafana-rules": {
       "export-rules": "",
       "loading": "",
@@ -691,18 +694,14 @@
       "message": "Keine Datenquellen gefunden"
     }
   },
+  "embed": {
+    "share": {
+      "time-range-description": "",
+      "time-range-label": ""
+    }
+  },
   "explore": {
     "add-to-dashboard": "Zum Dashboard hinzufügen",
-    "add-to-library-modal": {
-      "auto-star": "",
-      "data-source-name": "",
-      "data-source-type": "",
-      "description": "",
-      "info": "",
-      "query": "",
-      "title": "",
-      "visibility": ""
-    },
     "logs": {
       "maximum-pinned-logs": "",
       "no-logs-found": "",
@@ -710,6 +709,7 @@
       "stop-scan": ""
     },
     "query-library": {
+      "add-edit-description": "",
       "cancel": "",
       "default-description": "",
       "delete-query": "",
@@ -718,9 +718,25 @@
       "private": "",
       "public": "",
       "query-deleted": "",
+      "query-template-add-error": "",
       "query-template-added": "",
-      "query-template-error": "",
+      "query-template-edit-error": "",
+      "query-template-edited": "",
       "save": ""
+    },
+    "query-template-modal": {
+      "add-info": "",
+      "add-title": "",
+      "auto-star": "",
+      "data-source-name": "",
+      "description": "",
+      "edit-info": "",
+      "edit-title": "",
+      "query": "",
+      "visibility": ""
+    },
+    "query-template-modall": {
+      "data-source-type": ""
     },
     "rich-history": {
       "close-tooltip": "Abfrageverlauf schließen",
@@ -1038,6 +1054,11 @@
     "signup": {
       "button-label": "Registrieren",
       "new-to-question": "Neu bei Grafana?"
+    }
+  },
+  "logs": {
+    "infinite-scroll": {
+      "older-logs": ""
     }
   },
   "migrate-to-cloud": {
@@ -1503,6 +1524,10 @@
       "subtitle": "Verwende Servicekonten, um automatisierte Arbeitsabläufe in Grafana auszuführen",
       "title": "Servicekonten"
     },
+    "shared-dashboard": {
+      "subtitle": "",
+      "title": ""
+    },
     "sign-out": {
       "title": "Abmelden"
     },
@@ -1584,6 +1609,14 @@
     "starred-dashboard": "Dashboard markiert",
     "unstarred-dashboard": "Dashboard nicht markiert"
   },
+  "oauth": {
+    "form": {
+      "server-discovery-action-button": "",
+      "server-discovery-modal-close": "",
+      "server-discovery-modal-loading": "",
+      "server-discovery-modal-submit": ""
+    }
+  },
   "panel": {
     "header-menu": {
       "copy": "Kopieren",
@@ -1656,6 +1689,18 @@
     }
   },
   "plugins": {
+    "details": {
+      "labels": {
+        "dependencies": "",
+        "downloads": "",
+        "from": "",
+        "reportAbuse": "",
+        "signature": "",
+        "status": "",
+        "updatedAt": "",
+        "version": ""
+      }
+    },
     "empty-state": {
       "message": ""
     }
@@ -1716,8 +1761,7 @@
       "welcome-title": "Willkommen zu öffentlichen Dashboards!"
     },
     "delete-modal": {
-      "revoke-nonorphaned-body-text": "Sind Sie sicher, dass Sie diese URL widerrufen möchten? Das Dashboard wird nicht mehr öffentlich sein.",
-      "revoke-orphaned-body-text": "Das verwaiste öffentliche Dashboard wird nicht mehr öffentlich sein.",
+      "revoke-body-text": "",
       "revoke-title": "Öffentliche URL widerrufen"
     },
     "email-sharing": {
@@ -1816,10 +1860,6 @@
       "revoke-button-tooltip": "Öffentliche Dashboard-URL widerrufen",
       "view-button-tooltip": "Öffentliches Dashboard anzeigen"
     },
-    "dashboard-title": {
-      "orphaned-title": "<0>Verwaistes öffentliches Dashboard</0>",
-      "orphaned-tooltip": "Das verlinkte Dashboard wurde bereits gelöscht"
-    },
     "empty-state": {
       "message": "",
       "more-info": ""
@@ -1830,10 +1870,12 @@
   },
   "public-dashboard-users-access-list": {
     "dashboard-modal": {
+      "external-link": "",
       "loading-text": "Wird geladen ...",
       "open-dashboard-list-text": "Dashboard-Liste öffnen",
       "public-dashboard-link": "Öffentliches Dashboard-URL",
-      "public-dashboard-setting": "Einstellungen des öffentlichen Dashboards"
+      "public-dashboard-setting": "Einstellungen des öffentlichen Dashboards",
+      "sharing-setting": ""
     },
     "delete-user-modal": {
       "delete-user-button-text": "Benutzer löschen",
@@ -1843,8 +1885,12 @@
       "revoke-user-access-modal-desc-line1": "Sind Sie sicher, dass Sie den Zugriff für {{email}} widerrufen möchten?",
       "revoke-user-access-modal-desc-line2": "Durch diese Aktion wird {{email}}&apos; sofort der Zugriff auf alle öffentlichen Dashboards entzogen."
     },
+    "delete-user-shared-dashboards-modal": {
+      "revoke-user-access-modal-desc-line2": ""
+    },
     "modal": {
-      "dashboard-modal-title": "Öffentliche Dashboards"
+      "dashboard-modal-title": "Öffentliche Dashboards",
+      "shared-dashboard-modal-title": ""
     },
     "table-header": {
       "activated-label": "Aktiviert",
@@ -2031,8 +2077,7 @@
       "html": "HTML einbetten",
       "html-description": "Der folgende HTML-Code kann kopiert und in eine Website eingefügt werden. Wenn der anonyme Zugriff nicht aktiviert ist, muss der Benutzer, der diese Seite aufruft, bei Grafana angemeldet sein, damit das Diagramm geladen wird.",
       "info": "Erstelle einen HTML-Code zum Einbetten eines Inlineframes in dieses Panel.",
-      "time-range": "Aktueller Zeitbereich",
-      "time-range-description": "Wandelt den aktuellen relativen Zeitbereich in einen absoluten Zeitbereich um"
+      "time-range": ""
     },
     "export": {
       "back-button": "Zurück zum Export der Konfiguration",
@@ -2102,10 +2147,14 @@
   },
   "share-panel": {
     "drawer": {
-      "share-link-title": ""
+      "share-embed-title": "",
+      "share-link-title": "",
+      "share-snapshot-title": ""
     },
     "menu": {
-      "share-link-title": ""
+      "share-embed-title": "",
+      "share-link-title": "",
+      "share-snapshot-title": ""
     }
   },
   "share-playlist": {
@@ -2129,8 +2178,23 @@
     }
   },
   "shared-dashboard": {
+    "delete-modal": {
+      "revoke-body-text": "",
+      "revoke-title": ""
+    },
     "fields": {
       "timezone-label": "Zeitzone"
+    }
+  },
+  "shared-dashboard-list": {
+    "button": {
+      "config-button-tooltip": "",
+      "revoke-button-text": "",
+      "revoke-button-tooltip": "",
+      "view-button-tooltip": ""
+    },
+    "toggle": {
+      "pause-sharing-toggle-text": ""
     }
   },
   "shared-preferences": {
@@ -2191,6 +2255,9 @@
       "success-creation": "",
       "success-delete": "",
       "view-all-button": ""
+    },
+    "share-panel": {
+      "info-alert": ""
     },
     "url-column-header": "Snapshot url",
     "view-button": "Anzeigen"
@@ -2320,7 +2387,8 @@
   },
   "users-access-list": {
     "tabs": {
-      "public-dashboard-users-tab-title": "Nutzer des öffentlichen Dashboards"
+      "public-dashboard-users-tab-title": "Nutzer des öffentlichen Dashboards",
+      "shared-dashboard-users-tab-title": ""
     }
   },
   "variable": {

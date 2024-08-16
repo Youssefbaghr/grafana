@@ -120,6 +120,9 @@
       "used-by_one": "",
       "used-by_other": ""
     },
+    "contactPointFilter": {
+      "label": ""
+    },
     "grafana-rules": {
       "export-rules": "",
       "loading": "",
@@ -691,18 +694,14 @@
       "message": ""
     }
   },
+  "embed": {
+    "share": {
+      "time-range-description": "",
+      "time-range-label": ""
+    }
+  },
   "explore": {
     "add-to-dashboard": "Adicionar ao painel de controle",
-    "add-to-library-modal": {
-      "auto-star": "",
-      "data-source-name": "",
-      "data-source-type": "",
-      "description": "",
-      "info": "",
-      "query": "",
-      "title": "",
-      "visibility": ""
-    },
     "logs": {
       "maximum-pinned-logs": "",
       "no-logs-found": "",
@@ -710,6 +709,7 @@
       "stop-scan": ""
     },
     "query-library": {
+      "add-edit-description": "",
       "cancel": "",
       "default-description": "",
       "delete-query": "",
@@ -718,9 +718,25 @@
       "private": "",
       "public": "",
       "query-deleted": "",
+      "query-template-add-error": "",
       "query-template-added": "",
-      "query-template-error": "",
+      "query-template-edit-error": "",
+      "query-template-edited": "",
       "save": ""
+    },
+    "query-template-modal": {
+      "add-info": "",
+      "add-title": "",
+      "auto-star": "",
+      "data-source-name": "",
+      "description": "",
+      "edit-info": "",
+      "edit-title": "",
+      "query": "",
+      "visibility": ""
+    },
+    "query-template-modall": {
+      "data-source-type": ""
     },
     "rich-history": {
       "close-tooltip": "Fechar histórico de consultas",
@@ -1038,6 +1054,11 @@
     "signup": {
       "button-label": "Inscreva-se",
       "new-to-question": "Novo no Grafana?"
+    }
+  },
+  "logs": {
+    "infinite-scroll": {
+      "older-logs": ""
     }
   },
   "migrate-to-cloud": {
@@ -1503,6 +1524,10 @@
       "subtitle": "Use contas de serviço para executar cargas de trabalho automatizadas no Grafana",
       "title": "Contas de serviço"
     },
+    "shared-dashboard": {
+      "subtitle": "",
+      "title": ""
+    },
     "sign-out": {
       "title": "Finalizar sessão"
     },
@@ -1584,6 +1609,14 @@
     "starred-dashboard": "Painel de controle marcado como favorito",
     "unstarred-dashboard": "Painel de controle não marcado como favorito"
   },
+  "oauth": {
+    "form": {
+      "server-discovery-action-button": "",
+      "server-discovery-modal-close": "",
+      "server-discovery-modal-loading": "",
+      "server-discovery-modal-submit": ""
+    }
+  },
   "panel": {
     "header-menu": {
       "copy": "Copiar",
@@ -1656,6 +1689,18 @@
     }
   },
   "plugins": {
+    "details": {
+      "labels": {
+        "dependencies": "",
+        "downloads": "",
+        "from": "",
+        "reportAbuse": "",
+        "signature": "",
+        "status": "",
+        "updatedAt": "",
+        "version": ""
+      }
+    },
     "empty-state": {
       "message": ""
     }
@@ -1716,8 +1761,7 @@
       "welcome-title": "Boas-vindas aos painéis de controle públicos!"
     },
     "delete-modal": {
-      "revoke-nonorphaned-body-text": "Tem certeza de que deseja revogar este URL? O painel de controle não será mais público.",
-      "revoke-orphaned-body-text": "O painel de controle público órfão já não será público.",
+      "revoke-body-text": "",
       "revoke-title": "Revogar URL público"
     },
     "email-sharing": {
@@ -1816,10 +1860,6 @@
       "revoke-button-tooltip": "Revogar URL do painel de controle público",
       "view-button-tooltip": "Visualizar painel de controle público"
     },
-    "dashboard-title": {
-      "orphaned-title": "<0>Painel de controle público órfão</0>",
-      "orphaned-tooltip": "O painel de controle vinculado já foi excluído"
-    },
     "empty-state": {
       "message": "",
       "more-info": ""
@@ -1830,10 +1870,12 @@
   },
   "public-dashboard-users-access-list": {
     "dashboard-modal": {
+      "external-link": "",
       "loading-text": "Carregando...",
       "open-dashboard-list-text": "Abrir lista de painéis de controle",
       "public-dashboard-link": "URL do painel de controle público",
-      "public-dashboard-setting": "Configurações do painel de controle público"
+      "public-dashboard-setting": "Configurações do painel de controle público",
+      "sharing-setting": ""
     },
     "delete-user-modal": {
       "delete-user-button-text": "Excluir usuário",
@@ -1843,8 +1885,12 @@
       "revoke-user-access-modal-desc-line1": "Tem certeza de que deseja revogar o acesso por {{email}}?",
       "revoke-user-access-modal-desc-line2": "Esta ação irá imediatamente revogar o acesso por {{email}} a todos os painéis de controle públicos."
     },
+    "delete-user-shared-dashboards-modal": {
+      "revoke-user-access-modal-desc-line2": ""
+    },
     "modal": {
-      "dashboard-modal-title": "Painéis de controle públicos"
+      "dashboard-modal-title": "Painéis de controle públicos",
+      "shared-dashboard-modal-title": ""
     },
     "table-header": {
       "activated-label": "Ativado",
@@ -2031,8 +2077,7 @@
       "html": "HTML incorporado",
       "html-description": "O código HTML abaixo pode ser colado e incluído em outra página da Web. A menos que o acesso anônimo esteja ativado, o usuário visualizando essa página precisa estar logado no Grafana para que o gráfico carregue.",
       "info": "Gera HTML para incorporar um iframe com esse painel.",
-      "time-range": "Intervalo de tempo atual",
-      "time-range-description": "Transforma o intervalo de tempo relativo atual para um intervalo de tempo absoluto"
+      "time-range": ""
     },
     "export": {
       "back-button": "Voltar para exportar configuração",
@@ -2102,10 +2147,14 @@
   },
   "share-panel": {
     "drawer": {
-      "share-link-title": ""
+      "share-embed-title": "",
+      "share-link-title": "",
+      "share-snapshot-title": ""
     },
     "menu": {
-      "share-link-title": ""
+      "share-embed-title": "",
+      "share-link-title": "",
+      "share-snapshot-title": ""
     }
   },
   "share-playlist": {
@@ -2129,8 +2178,23 @@
     }
   },
   "shared-dashboard": {
+    "delete-modal": {
+      "revoke-body-text": "",
+      "revoke-title": ""
+    },
     "fields": {
       "timezone-label": "Fuso horário"
+    }
+  },
+  "shared-dashboard-list": {
+    "button": {
+      "config-button-tooltip": "",
+      "revoke-button-text": "",
+      "revoke-button-tooltip": "",
+      "view-button-tooltip": ""
+    },
+    "toggle": {
+      "pause-sharing-toggle-text": ""
     }
   },
   "shared-preferences": {
@@ -2191,6 +2255,9 @@
       "success-creation": "",
       "success-delete": "",
       "view-all-button": ""
+    },
+    "share-panel": {
+      "info-alert": ""
     },
     "url-column-header": "URL da captura",
     "view-button": "Visualizar"
@@ -2320,7 +2387,8 @@
   },
   "users-access-list": {
     "tabs": {
-      "public-dashboard-users-tab-title": "Usuários do painel de controle público"
+      "public-dashboard-users-tab-title": "Usuários do painel de controle público",
+      "shared-dashboard-users-tab-title": ""
     }
   },
   "variable": {
